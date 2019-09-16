@@ -8,7 +8,9 @@ import okhttp3.*;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by codedrinker on 2019/4/24.
+ *
+ * @author codedrinker
+ * @date 2019/4/24
  */
 @Component
 @Slf4j
