@@ -73,3 +73,15 @@ mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 - 2019-8-18 修复搜索输入 ? 号出现异常问题
 - 2019-8-22 修复图片大小限制和提问内容为空问题
 - 2019-9-1 添加动态导航栏
+
+~~~sql
+//获取范围的个数
+select count(*)
+from TAB;
+//获取此时对应的范围
+select TSCOPE
+from TAB where TID = 1;
+//获取此范围下的对应的所有数据
+select TNAME
+from TAB,TAB_VALUE where Tab.TID = TAB_VALUE.TABID AND Tab.TID = 1;
+~~~

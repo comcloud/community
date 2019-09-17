@@ -18,316 +18,374 @@
     <table id="7" parent="4" name="NAV"/>
     <table id="8" parent="4" name="NOTIFICATION"/>
     <table id="9" parent="4" name="QUESTION"/>
-    <table id="10" parent="4" name="USER"/>
-    <column id="11" parent="5" name="ID">
+    <table id="10" parent="4" name="TAB"/>
+    <table id="11" parent="4" name="TAB_VALUE"/>
+    <table id="12" parent="4" name="USER"/>
+    <column id="13" parent="5" name="ID">
       <Position>1</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_03CF6577_EC3F_411D_9284_7AE940E8ED1E)</DefaultExpression>
     </column>
-    <column id="12" parent="5" name="TITLE">
+    <column id="14" parent="5" name="TITLE">
       <Position>2</Position>
       <DataType>VARCHAR(256)|12s</DataType>
       <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
     </column>
-    <column id="13" parent="5" name="URL">
+    <column id="15" parent="5" name="URL">
       <Position>3</Position>
       <DataType>VARCHAR(512)|12s</DataType>
       <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
     </column>
-    <column id="14" parent="5" name="IMAGE">
+    <column id="16" parent="5" name="IMAGE">
       <Position>4</Position>
       <DataType>VARCHAR(256)|12s</DataType>
       <DefaultExpression>&apos;NULL&apos;</DefaultExpression>
     </column>
-    <column id="15" parent="5" name="GMT_START">
+    <column id="17" parent="5" name="GMT_START">
       <Position>5</Position>
       <DataType>BIGINT(19)|-5s</DataType>
     </column>
-    <column id="16" parent="5" name="GMT_END">
+    <column id="18" parent="5" name="GMT_END">
       <Position>6</Position>
       <DataType>BIGINT(19)|-5s</DataType>
     </column>
-    <column id="17" parent="5" name="GMT_CREATE">
+    <column id="19" parent="5" name="GMT_CREATE">
       <Position>7</Position>
       <DataType>BIGINT(19)|-5s</DataType>
     </column>
-    <column id="18" parent="5" name="GMT_MODIFIED">
+    <column id="20" parent="5" name="GMT_MODIFIED">
       <Position>8</Position>
       <DataType>BIGINT(19)|-5s</DataType>
     </column>
-    <column id="19" parent="5" name="STATUS">
+    <column id="21" parent="5" name="STATUS">
       <Position>9</Position>
       <DataType>INTEGER(10)|4s</DataType>
     </column>
-    <column id="20" parent="5" name="POS">
+    <column id="22" parent="5" name="POS">
       <Position>10</Position>
       <DataType>VARCHAR(10)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="21" parent="5" name="PRIMARY_KEY_8">
+    <index id="23" parent="5" name="PRIMARY_KEY_8">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="22" parent="5" name="CONSTRAINT_8">
+    <key id="24" parent="5" name="CONSTRAINT_8">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="23" parent="6" name="ID">
+    <column id="25" parent="6" name="ID">
       <Position>1</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_483F8940_6D76_4009_B810_F7D70785F2B9)</DefaultExpression>
     </column>
-    <column id="24" parent="6" name="PARENT_ID">
+    <column id="26" parent="6" name="PARENT_ID">
       <Position>2</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="25" parent="6" name="TYPE">
+    <column id="27" parent="6" name="TYPE">
       <Position>3</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="26" parent="6" name="COMMENTATOR">
+    <column id="28" parent="6" name="COMMENTATOR">
       <Position>4</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="27" parent="6" name="GMT_CREATE">
+    <column id="29" parent="6" name="GMT_CREATE">
       <Position>5</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="28" parent="6" name="GMT_MODIFIED">
+    <column id="30" parent="6" name="GMT_MODIFIED">
       <Position>6</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="29" parent="6" name="LIKE_COUNT">
+    <column id="31" parent="6" name="LIKE_COUNT">
       <Position>7</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="30" parent="6" name="CONTENT">
+    <column id="32" parent="6" name="CONTENT">
       <Position>8</Position>
       <DataType>VARCHAR(1024)|12s</DataType>
     </column>
-    <column id="31" parent="6" name="COMMENT_COUNT">
+    <column id="33" parent="6" name="COMMENT_COUNT">
       <Position>9</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <index id="32" parent="6" name="PRIMARY_KEY_B">
+    <index id="34" parent="6" name="PRIMARY_KEY_B">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="33" parent="6" name="CONSTRAINT_6">
+    <key id="35" parent="6" name="CONSTRAINT_6">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="34" parent="7" name="ID">
+    <column id="36" parent="7" name="ID">
       <Position>1</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_4C0D39AA_CC5A_4FCE_8EB4_E249C4936EA5)</DefaultExpression>
     </column>
-    <column id="35" parent="7" name="TITLE">
+    <column id="37" parent="7" name="TITLE">
       <Position>2</Position>
       <DataType>VARCHAR(100)|12s</DataType>
     </column>
-    <column id="36" parent="7" name="URL">
+    <column id="38" parent="7" name="URL">
       <Position>3</Position>
       <DataType>VARCHAR(256)|12s</DataType>
     </column>
-    <column id="37" parent="7" name="PRIORITY">
+    <column id="39" parent="7" name="PRIORITY">
       <Position>4</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="38" parent="7" name="GMT_CREATE">
+    <column id="40" parent="7" name="GMT_CREATE">
       <Position>5</Position>
       <DataType>BIGINT(19)|-5s</DataType>
     </column>
-    <column id="39" parent="7" name="GMT_MODIFIED">
+    <column id="41" parent="7" name="GMT_MODIFIED">
       <Position>6</Position>
       <DataType>BIGINT(19)|-5s</DataType>
     </column>
-    <column id="40" parent="7" name="STATUS">
+    <column id="42" parent="7" name="STATUS">
       <Position>7</Position>
       <DataType>INTEGER(10)|4s</DataType>
     </column>
-    <index id="41" parent="7" name="PRIMARY_KEY_1">
+    <index id="43" parent="7" name="PRIMARY_KEY_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="42" parent="7" name="CONSTRAINT_1">
+    <key id="44" parent="7" name="CONSTRAINT_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="43" parent="8" name="ID">
+    <column id="45" parent="8" name="ID">
       <Position>1</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_B3BA994F_4648_4D35_AFBC_09AEB1CC6244)</DefaultExpression>
     </column>
-    <column id="44" parent="8" name="NOTIFIER">
+    <column id="46" parent="8" name="NOTIFIER">
       <Position>2</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="45" parent="8" name="RECEIVER">
+    <column id="47" parent="8" name="RECEIVER">
       <Position>3</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="46" parent="8" name="OUTERID">
+    <column id="48" parent="8" name="OUTERID">
       <Position>4</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="8" name="TYPE">
+    <column id="49" parent="8" name="TYPE">
       <Position>5</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="48" parent="8" name="GMT_CREATE">
+    <column id="50" parent="8" name="GMT_CREATE">
       <Position>6</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="49" parent="8" name="STATUS">
+    <column id="51" parent="8" name="STATUS">
       <Position>7</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="50" parent="8" name="NOTIFIER_NAME">
+    <column id="52" parent="8" name="NOTIFIER_NAME">
       <Position>8</Position>
       <DataType>VARCHAR(100)|12s</DataType>
     </column>
-    <column id="51" parent="8" name="OUTER_TITLE">
+    <column id="53" parent="8" name="OUTER_TITLE">
       <Position>9</Position>
       <DataType>VARCHAR(256)|12s</DataType>
     </column>
-    <index id="52" parent="8" name="PRIMARY_KEY_41">
+    <index id="54" parent="8" name="PRIMARY_KEY_41">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="53" parent="8" name="CONSTRAINT_A">
+    <key id="55" parent="8" name="CONSTRAINT_A">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="54" parent="9" name="ID">
+    <column id="56" parent="9" name="ID">
       <Position>1</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_944C4C72_D485_4A7A_857A_7686F8B5F5E3)</DefaultExpression>
     </column>
-    <column id="55" parent="9" name="TITLE">
+    <column id="57" parent="9" name="TITLE">
       <Position>2</Position>
       <DataType>VARCHAR(50)|12s</DataType>
     </column>
-    <column id="56" parent="9" name="DESCRIPTION">
+    <column id="58" parent="9" name="DESCRIPTION">
       <Position>3</Position>
       <DataType>CLOB(max)|2005s</DataType>
     </column>
-    <column id="57" parent="9" name="GMT_CREATE">
+    <column id="59" parent="9" name="GMT_CREATE">
       <Position>4</Position>
       <DataType>BIGINT(19)|-5s</DataType>
     </column>
-    <column id="58" parent="9" name="GMT_MODIFIED">
+    <column id="60" parent="9" name="GMT_MODIFIED">
       <Position>5</Position>
       <DataType>BIGINT(19)|-5s</DataType>
     </column>
-    <column id="59" parent="9" name="CREATOR">
+    <column id="61" parent="9" name="CREATOR">
       <Position>6</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="60" parent="9" name="COMMENT_COUNT">
+    <column id="62" parent="9" name="COMMENT_COUNT">
       <Position>7</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="61" parent="9" name="VIEW_COUNT">
+    <column id="63" parent="9" name="VIEW_COUNT">
       <Position>8</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="62" parent="9" name="LIKE_COUNT">
+    <column id="64" parent="9" name="LIKE_COUNT">
       <Position>9</Position>
       <DataType>INTEGER(10)|4s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="63" parent="9" name="TAG">
+    <column id="65" parent="9" name="TAG">
       <Position>10</Position>
       <DataType>VARCHAR(256)|12s</DataType>
     </column>
-    <index id="64" parent="9" name="PRIMARY_KEY_7">
+    <index id="66" parent="9" name="PRIMARY_KEY_7">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="65" parent="9" name="CONSTRAINT_E">
+    <key id="67" parent="9" name="CONSTRAINT_E">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="66" parent="10" name="ID">
+    <column id="68" parent="10" name="TID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_097AE801_6109_45DF_9FF2_42E3C552CD8F)</DefaultExpression>
+    </column>
+    <column id="69" parent="10" name="TSCOPE">
+      <Position>2</Position>
+      <DataType>VARCHAR(10)|12s</DataType>
+    </column>
+    <index id="70" parent="10" name="PRIMARY_KEY_14">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="71" parent="10" name="CONSTRAINT_14">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="72" parent="11" name="VID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_FD84C1B6_9E7A_4445_9CDB_CD3024D1DC36)</DefaultExpression>
+    </column>
+    <column id="73" parent="11" name="TNAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(20)|12s</DataType>
+    </column>
+    <column id="74" parent="11" name="TABID">
+      <Position>3</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+    </column>
+    <index id="75" parent="11" name="PRIMARY_KEY_91">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>VID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="76" parent="11" name="VALUE_TAB_PK_INDEX_9">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>TABID</ColNames>
+    </index>
+    <key id="77" parent="11" name="CONSTRAINT_5">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>VID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="78" parent="11" name="VALUE_TAB_PK">
+      <ColNames>TABID</ColNames>
+      <RefTableName>TAB</RefTableName>
+      <RefKeyName>CONSTRAINT_14</RefKeyName>
+      <RefColNames>TID</RefColNames>
+    </foreign-key>
+    <column id="79" parent="12" name="ID">
       <Position>1</Position>
       <DataType>BIGINT(19)|-5s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <DefaultExpression>(NEXT VALUE FOR PUBLIC.SYSTEM_SEQUENCE_F81A64C5_2752_482E_8E11_18186B8EE265)</DefaultExpression>
     </column>
-    <column id="67" parent="10" name="ACCOUNT_ID">
+    <column id="80" parent="12" name="ACCOUNT_ID">
       <Position>2</Position>
       <DataType>VARCHAR(100)|12s</DataType>
     </column>
-    <column id="68" parent="10" name="NAME">
+    <column id="81" parent="12" name="NAME">
       <Position>3</Position>
       <DataType>VARCHAR(50)|12s</DataType>
     </column>
-    <column id="69" parent="10" name="TOKEN">
+    <column id="82" parent="12" name="TOKEN">
       <Position>4</Position>
       <DataType>VARCHAR(36)|12s</DataType>
     </column>
-    <column id="70" parent="10" name="GMT_CREATE">
+    <column id="83" parent="12" name="GMT_CREATE">
       <Position>5</Position>
       <DataType>BIGINT(19)|-5s</DataType>
     </column>
-    <column id="71" parent="10" name="GMT_MODIFIED">
+    <column id="84" parent="12" name="GMT_MODIFIED">
       <Position>6</Position>
       <DataType>BIGINT(19)|-5s</DataType>
     </column>
-    <column id="72" parent="10" name="BIO">
+    <column id="85" parent="12" name="BIO">
       <Position>7</Position>
       <DataType>VARCHAR(256)|12s</DataType>
     </column>
-    <column id="73" parent="10" name="AVATAR_URL">
+    <column id="86" parent="12" name="AVATAR_URL">
       <Position>8</Position>
       <DataType>VARCHAR(100)|12s</DataType>
     </column>
-    <index id="74" parent="10" name="PRIMARY_KEY_4">
+    <index id="87" parent="12" name="PRIMARY_KEY_4">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="75" parent="10" name="CONSTRAINT_2">
+    <key id="88" parent="12" name="CONSTRAINT_2">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>

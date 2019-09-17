@@ -9,9 +9,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Created by codedrinker on 2019/6/5.
+ *
+ * @author codedrinker
+ * @date 2019/6/5
  */
 public class TagCache {
+    /***
+     * 返回所有的标签集合
+     */
     public static List<TagDTO> get() {
         List<TagDTO> tagDTOS = new ArrayList<>();
         TagDTO program = new TagDTO();
@@ -23,7 +28,6 @@ public class TagCache {
         framework.setCategoryName("平台框架");
         framework.setTags(Arrays.asList("laravel", "spring", "express", "django", "flask", "yii", "ruby-on-rails", "tornado", "koa", "struts"));
         tagDTOS.add(framework);
-
 
         TagDTO server = new TagDTO();
         server.setCategoryName("服务器");
