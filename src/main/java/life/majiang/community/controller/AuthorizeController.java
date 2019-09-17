@@ -18,7 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
 /**
- * Created by codedrinker on 2019/4/24.
+ *
+ * @author codedrinker
+ * @date 2019/4/24
  */
 @Controller
 @Slf4j
