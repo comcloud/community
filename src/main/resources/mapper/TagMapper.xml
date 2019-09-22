@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="life.majiang.community.mapper.TagMapper">
+
+<!--    获取分类标签的数量-->
+    <select id="getCount" resultType="java.lang.Integer">
+        select count (*) from TAB
+    </select>
+<!--    获取分类标签的名称-->
+    <select id="getName" resultType="java.lang.String">
+        select TSCOPE from TAB
+    </select>
+    <select id="getChild" parameterType="java.lang.Integer" resultType="java.lang.String">
+        SELECT TNAME from TAB,TAB_VALUE where TID = TABID AND TID=#{TID}
+    </select>
+</mapper>

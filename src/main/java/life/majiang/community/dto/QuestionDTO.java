@@ -4,7 +4,9 @@ import life.majiang.community.model.User;
 import lombok.Data;
 
 /**
- * Created by codedrinker on 2019/5/7.
+ *
+ * @author codedrinker
+ * @date 2019/5/7
  */
 @Data
 public class QuestionDTO {

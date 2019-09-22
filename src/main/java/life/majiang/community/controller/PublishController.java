@@ -5,6 +5,7 @@ import life.majiang.community.dto.QuestionDTO;
 import life.majiang.community.model.Question;
 import life.majiang.community.model.User;
 import life.majiang.community.service.QuestionService;
+import life.majiang.community.service.TagService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,6 +28,8 @@ public class PublishController {
 
     @Autowired
     private QuestionService questionService;
+    @Autowired
+    private TagService tagService;
 
     @GetMapping("/publish/{id}")
     public String edit(@PathVariable(name = "id") Long id,
@@ -36,14 +39,15 @@ public class PublishController {
         model.addAttribute("description", question.getDescription());
         model.addAttribute("tag", question.getTag());
         model.addAttribute("id", question.getId());
-        model.addAttribute("tags", TagCache.get());
+        model.addAttribute("tags", tagService.get());
         return "publish";
     }
 
 
     @GetMapping("/publish")
     public String publish(Model model) {
-        model.addAttribute("tags", TagCache.get());
+        /**model.addAttribute("tags", TagCache.get()); */
+         model.addAttribute("tags", tagService.get());
         return "publish";
     }
 

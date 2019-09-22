@@ -4,7 +4,30 @@
     <title>发布 - 码匠社区</title>
     <head th:insert="~{import :: head}"></head>
     <head th:insert="~{import :: markdown}"></head>
+    <script>
+        $(function(){
+            //给标签栏添加点击事件
+            $('#tagUl > li').on('click',function () {
+                /**
+                 * 1.给当前点击的li设置class为active tab-pane
+                 * 2.给兄弟标签设置为tab-pane
+                 * */
+                $(this).attr('class','active tab-pane').siblings('li').attr('class','tab-pane');
+                var selectName = $(this).children('a').attr('href');
+                selectName = selectName.substring(1);
+                var list = $('.tab-content > div');//此时取出的dom对象
+                var content;//存储对应选定的div标签
+                for(var i = 0; i < list.length ; i++){
+                    if(list[i].getAttribute('id') == selectName){
+                        content = $(list[i]);
+                    }
+                }
+                content.attr('class','active tab-pane').siblings().attr('class','tab-pane');
+            });
+        });
+    </script>
 </head>
+
 <body>
 
 <div th:insert="~{navigation :: nav}"></div>
@@ -40,7 +63,7 @@
                             placeholder: "请输入问题描述",
                             imageUpload: true,
                             imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-                            imageUploadURL: "/file/upload",
+                            imageUploadURL: "/file/upload"
                         });
                     });
                 </script>
@@ -50,14 +73,16 @@
                            autocomplete="off"
                            placeholder="输入标签，以，号分隔"
                            onclick="showSelectTag()">
+                    <!--标签栏-->
                     <div id="select-tag" class="publish-tag-tab">
-                        <ul class="nav nav-tabs" role="tablist">
+                        <ul class="nav nav-tabs" id="tagUl" role="tablist">
                             <li role="presentation" th:each="selectCategory,selectCategoryStat: ${tags}"
                                 th:class="${selectCategoryStat.first ? 'active':''}">
                                 <a th:href="${'#'+selectCategory.categoryName}" aria-controls="home" role="tab"
                                    data-toggle="tab" th:text="${selectCategory.categoryName}"></a>
                             </li>
                         </ul>
+<!--                        标签对应的内容栏-->
                         <div class="tab-content">
                             <div role="tabpanel" th:id="${selectCategory.categoryName}"
                                  th:each="selectCategory: ${tags}"
